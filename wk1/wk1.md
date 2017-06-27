@@ -16,5 +16,19 @@
     - Nature of binary tree means that the 2^(level number) cancels and no. of ops is independent of level number.
     - Total operation = sum (operations on level * number of levels)
 
+## Guiding Principles of Algorithm Analysis
+1. Use worst-case analysis: your running time bound should hold for every input size.
+    - Others include: average-case, best-case, benchmarks.
+2. Ignore constant factors and lower order terms.
+    - Become negligible at high n values.
+    - Constants depend on individual system architecture and other minutiae.
+3. Use Asymptotic Analysis: focus on running time for large input sizes.
+    - Conclusions may not be accurate for small input sizes.
+    - If problem size is small anyway, excess time for algorithm is negligible anyway.
+    - e.g. for small n, insertion sort running time < merge sort running time.
+
+- N.B. Fast algorithm ~= worst-case running time that grows slowly with input size.
+- Sweet Spot: balance of mathematical tractability and predictive power.
+- Holy Grail: linear running time (or as close as possible).
 
  
