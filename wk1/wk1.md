@@ -71,5 +71,18 @@
     - n <= c for all n > n0.
     - This is clearly false.
 
+## Omega Notation
+- Definition: T(n) = Omega(f(n)) iff there exists constants c, n0 such that T(n) >= c*f(n) for all n >= n0.
+- Same concept as Big O, except we are finding a constant multiple that is always less than T(n).
+
+## Theta Notation
+- Definition: T(n) = Theta(f(n)) iff T(n) = O(f(n)) and T(n) = Omega(f(n)).
+- There exists constants c1, c2, n0 such that c1*f(n) <= T(n) <= c2.F(n) for all n >= n0.
+- "Actual" running time.
+- We focus on Big O as upper bounds are more relevant.
+
+## Little O Notation
+- Strictly less quickly than n.
+- Definition: T(n) = o(f(n)) iff for all constants c>0, there exists a constance n0 such that T(n) <= c*f(n) for all n > n0.
 
  
