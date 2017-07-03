@@ -31,4 +31,45 @@
 - Sweet Spot: balance of mathematical tractability and predictive power.
 - Holy Grail: linear running time (or as close as possible).
 
+## Asymptotic Analysis
+- Vocabulary for the design and analysis of algorithms.
+- Coarse enough to supress spurious detail, fine enough to be a useful measure.
+- Suppress constant factors and lower-order terms.
+    - Lower order terms irrelevant for large inputs.
+    - Too system-dependent.
+- E.g. equate 6nlog2n + 6n to nlogn.
+    - Running time is O(nlogn)
+    - "Big O" notation.
+    - n = input size.
+- E.g. Do arrays A, B have a number in common?
+    - O(n^2)
+
+## Big O Notation
+- T(n) = function on integers.
+- Big O of T(n) = O(T) = [usually] the worst case running time of T.
+- i.e. the running time of T is bounded by some constant multiple of f(n), no matter the size of n.
+- Formal Definition:
+    - iff there exists constants c, n0 > 0, such that T(n) <= c.f(n) for all n >= n0.
+
+### Example 1
+- if T(n) = akn^k + ... + a1n + a0
+- T(n) = O(n^k)
+- Proof:
+    - Let n0 = 1 and c = |ak| + |ak-1| + ... + |a1| + |a0|
+    - Show All N >= 1, T(n) < c.n^k
+    - We have, for every n >= 1,
+    - T(n) <= |ak|n^k + ... + |a1|n + |a0|
+    - |ak|n^k + ... + |a1|n^k + |a0| n^k (replace all n terms with n^k - will be larger).
+    - = c*n^k
+
+### Example 2
+- Claim: for every k >= 1, n^k is not O(n^(k-1)).
+- Proof: by contradiction.
+    - Suppose n^k = O(n^(k-1))
+    - Then there exist constants c, n0 > 0 such that n^k < c*n^(k-1) for all n >= n0.
+    - Cancel n^(k-1) from both sides.
+    - n <= c for all n > n0.
+    - This is clearly false.
+
+
  
